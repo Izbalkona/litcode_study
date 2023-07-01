@@ -1,0 +1,23 @@
+class Solution(object):
+    def mergeAlternately(self, word1, word2):
+        self.word1 = word1
+        self.word2 = word2
+        main_word = word1
+        second_word = word2
+        count = 0
+        sol_list = ""
+        while count < len(word1) or count < len(word2):
+            if count < len(word1):
+                sol_list = sol_list + word1[count]
+            if count < len(word2):
+                sol_list = sol_list + word2[count]
+            count = count + 1
+        return sol_list
+
+            
+            
+        """
+        :type word1: str
+        :type word2: str
+        :rtype: str
+        """
