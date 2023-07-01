@@ -1,0 +1,26 @@
+class Solution(object):
+    def kidsWithCandies(self, candies, extraCandies):
+        lenr = len(candies)
+        max_i = candies[0]
+        list_result = []
+        for i in candies:
+            if max_i < i:
+                max_i = i
+            
+        
+        print('new_max_i = ', max_i)
+
+        for i in candies:
+            if i + extraCandies >= max_i:
+                print('true')
+                list_result.append(1)
+            else: 
+                print('false')
+                list_result.append(0)
+        print(list_result)
+        return list_result
+        """
+        :type candies: List[int]
+        :type extraCandies: int
+        :rtype: List[bool]
+        """
